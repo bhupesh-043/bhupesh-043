@@ -6,10 +6,14 @@ def target_sum(arr, target):
 
     while(left<right):
 
+        #It's condition that when the target get greater than the actual target
+        
         if arr[left]+arr[right] > target:
             right = right-1
+        # It's condition that the target less that the actual one so that we will do push one step forward
         elif arr[left]+arr[right] < target:
             left = left+1
+            
         elif arr[left]+arr[right] == target:
             print("Both the no ", arr[left], "&", arr[right])
             right = right-1
